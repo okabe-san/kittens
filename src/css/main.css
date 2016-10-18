@@ -1,1 +1,8 @@
 /* add custom styles */
+img {
+  max-width: 150px;
+}
+
+th {
+  padding-bottom: 30px;
+}

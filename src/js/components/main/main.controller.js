@@ -6,11 +6,10 @@
     .module('myApp.components.main', [])
     .controller('mainController', mainController);
 
-  mainController.$inject = ['$scope'];
+  mainController.$inject = ['$rootScope'];
 
-  function mainController($scope) {
-    /*jshint validthis: true */
-    // this.greeting = 'Hello World!';
+  function mainController($rootScope) {
+    //console.log($rootScope);
   }
 
 })();

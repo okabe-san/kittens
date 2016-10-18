@@ -1,0 +1,16 @@
+<h1>All Kittens</h1>
+<hr>
+
+<form ng-submit="addCtrl.add(item)">
+  <p>Name:
+  <input type="text" ng-model="item.name" name="name"></input></p>
+  <p>Bio:
+  <input type="text" ng-model="item.bio" name="bio"></input></p>
+  <p>Image:
+  <input type="text" ng-model="item.image" name="image"></input></p>
+  <p>Like:
+  <input type="text" ng-model="item.like" name="like"></input></p>
+  <button type="submit" ng-click="">Submit</button>
+</form>
+
+<h1><a href="/#/">Cancel</a></h1>
