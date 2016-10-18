@@ -1,23 +1,14 @@
-<h1>All Kittens</h1> <a href="/#/add">Add New Kitten</a>
-<hr>
-
-<table style="width:100%" ng-controll="mainCtrl">
+<table class="bordered">
   <tr>
     <th>Name</th>
     <th>Bio</th>
     <th>Image</th>
     <th>Likes</th>
   </tr>
-  <tr>
-    <td valign="bottom">Angel</td>
-    <td valign="bottom">Darkest Syn</td>
-    <td><img ng-src="http://cl.jroo.me/z1/S/_/v/e/a.daa-small-Cool-and-funny-kitten.jpg"></td>
-    <td valign="bottom">5</td>
-  </tr>
   <tr ng-repeat="item in kittens">
-    <td valign="bottom">{{item.name}}</td>
-    <td valign="bottom">{{item.bio}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.bio}}</td>
     <td><img ng-src="{{item.image}}"</td>
-    <td valign="bottom">{{item.like}}</td>
+    <td>{{item.like}}</td>
   </tr>
 </table>

@@ -4,7 +4,16 @@
 
   angular
     .module('myApp.config', [])
-    .config(appConfig);
+    .config(appConfig)
+    .run(function($rootScope) {
+      $rootScope.kittens = [{
+        id: $rootScope.id++,
+        name: 'Angel',
+        bio: 'Darkest Syn',
+        image: 'http://cl.jroo.me/z1/S/_/v/e/a.daa-small-Cool-and-funny-kitten.jpg',
+        like: 5
+      }];
+    })
 
   function appConfig($routeProvider) {
     $routeProvider

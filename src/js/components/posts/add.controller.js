@@ -9,11 +9,10 @@
   addController.$inject = ['$rootScope', '$location'];
 
   function addController($rootScope, $location) {
-    // console.log($scope);
-    $rootScope.kittens = [];
-    let arr = $rootScope.kittens;
+    console.log($rootScope.kittens);
+    /* jshint validthis:true */
     this.add = (info) => {
-      arr.push({
+      $rootScope.kittens.push({
         name: info.name,
         bio: info.bio,
         image: info.image,

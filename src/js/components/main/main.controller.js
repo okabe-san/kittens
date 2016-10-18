@@ -9,7 +9,6 @@
   mainController.$inject = ['$rootScope'];
 
   function mainController($rootScope) {
-    //console.log($rootScope);
+    console.log($rootScope);
   }
-
 })();

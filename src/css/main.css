@@ -3,6 +3,6 @@ img {
   max-width: 150px;
 }
 
-th {
-  padding-bottom: 30px;
+.nav-wrapper {
+  padding: 0 10%;
 }
