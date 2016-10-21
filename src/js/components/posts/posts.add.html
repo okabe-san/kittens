@@ -1,12 +1,18 @@
-<form ng-submit="addCtrl.add(item)">
+<form ng-submit="addCtrl.add(item)" name="validation">
   <p>Name:
-  <input class="form-control" type="text" ng-model="item.name"></input></p>
+  <input class="form-control" type="text" ng-model="item.name" name="name" ng-minlength=3 ng-maxlength=12></input></p>
+    <h6 ng-show="validation.name.$error.minlength">At least 3 letters.</h6>
+    <h6 ng-show="validation.name.$error.maxlength">Less than 12 letters.</h6>
   <p>Bio:
-  <input class="form-control" type="text" ng-model="item.bio"></input></p>
+  <input class="form-control" type="text" ng-model="item.bio" name="bio" ng-minlength=3 ng-maxlength=255></input></p>
+    <h6 ng-show="validation.bio.$error.minlength">At least 3 letters.</h6>
+    <h6 ng-show="validation.bio.$error.maxlength">Less than 255 letters.</h6>
   <p>Image:
   <input class="form-control" type="text" ng-model="item.image"></input></p>
   <p>Like:
-  <input class="form-control" type="text" ng-model="item.like"></input></p>
+  <input class="form-control" type="text" ng-model="item.like" name="like" ng-minlength=3 ng-maxlength=12></input></p>
+    <h6 ng-show="validation.like.$error.minlength">At least 3 letters.</h6>
+    <h6 ng-show="validation.like.$error.maxlength">Less than 12 letters.</h6>
   <button class="btn btn-default"type="submit" ng-click="">Submit</button>
   <a href="/#/" class="btn btn-default">Cancel</a>
 </form>

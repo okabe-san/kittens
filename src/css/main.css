@@ -1,4 +1,8 @@
 /* add custom styles */
+h6 {
+  color: orange;
+}
+
 img {
   max-width: 150px;
 }

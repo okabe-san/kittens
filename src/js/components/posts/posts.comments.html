@@ -1,0 +1,20 @@
+<br>
+<img ng-src="{{commentsCtrl.kitten.image}}">
+<table class="bordered">
+  <tr>
+    <th>Comment</th>
+  </tr>
+  <tr ng-repeat="item in commentsCtrl.kitten.comments">
+    <td>{{item.comment}}
+    </td>
+  </tr>
+</table>
+<br>
+<form ng-submit="commentsCtrl.add(item)" name="validation">
+  <p>Add Comment
+  <input class="form-control" type="text" ng-model="item.comment" name="comment" ng-minlength=3 ng-maxlength=500></input></p>
+    <h6 ng-show="validation.comment.$error.minlength">At least 3 letters.</h6>
+    <h6 ng-show="validation.comment.$error.maxlength">Less than 500 letters.</h6>
+  <button class="btn btn-default"type="submit" ng-click="">Submit</button>
+  <a href="/#/" class="btn btn-default">Cancel</a>
+</form>

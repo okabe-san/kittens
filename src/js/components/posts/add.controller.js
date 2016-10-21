@@ -13,6 +13,7 @@
     /* jshint validthis:true */
     this.add = (info) => {
       $rootScope.kittens.push({
+        id: $rootScope.id++,
         name: info.name,
         bio: info.bio,
         image: info.image,
